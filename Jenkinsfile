@@ -48,7 +48,7 @@ node {
     stage('build docker') {
         sh "cp -R src/main/docker build/"
         sh "cp build/libs/*.war build/docker/"
-        dockerImage = docker.build('lotrlcg', 'build/docker')
+        dockerImage = docker.build('wolf685cln/lotr-lcg', 'build/docker')
     }
 
     stage('publish docker') {
